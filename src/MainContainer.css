@@ -1,0 +1,48 @@
+.main-container {
+  padding: 10px 20px;
+  overflow: hidden; 
+  
+  
+}
+
+.btn {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 10px;
+  
+  gap: 20px;
+}
+
+.card-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.new-card-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  margin-top: 0px;
+  overflow: hidden;
+ 
+ 
+}
+
+.recent {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+}
+
+.view {
+  cursor: pointer;
+  color: #6A0DAD;
+  font-weight: bold;
+  text-decoration: underline;
+}
+.new-card-detail{
+  display: flex;
+}

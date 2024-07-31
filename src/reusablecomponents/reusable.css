@@ -1,0 +1,204 @@
+/*button.css*/
+.add-button {
+    background-color: #6A0DAD;
+    border: none;
+    border-radius: 10px;
+    color: white;
+    cursor: pointer;
+    font-size: 14px; /* Adjusted font size for better fit */
+    height: 40px;
+    width: 120px; /* Adjusted width for better fit */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.3s, transform 0.1s;
+  }
+  
+  .add-button:hover {
+    background-color: #5a0aa3;
+    transform: scale(1.05);
+  }
+  
+  .add-symbol {
+    font-weight: bold;
+  }
+  
+
+  /* card.css */
+  .card-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px; /* Adjust padding for smaller size */
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    background-color: white;
+    transition: box-shadow 0.3s;
+    width: 180px; /* Adjusted width for small card */
+    height: 80px; /* Adjusted height for small card */
+    margin: 10px; /* Margin for spacing between cards */
+  }
+  
+  .card-container:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+  
+  .arrow {
+    font-size: 16px; /* Smaller font size */
+    margin-right: 10px; /* Smaller margin */
+  }
+  
+  .logoca {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #ff6347;
+    border-radius: 50%;
+    height: 50px;
+    width: 50px;
+  }
+  
+  .logo-content {
+    width: 30px; 
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .logo-content img {
+    max-width: 100%;
+    max-height: 100%;
+  }
+  
+  .timeline {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .timeline-item {
+    font-size: 20px; /* Adjust font size */
+    font-weight: 900;
+    margin: 3px 0; 
+    color: #343a40;
+  }
+  
+  .timeline-item2 {
+    font-size: 14px; /* Adjust font size */
+    margin-bottom: 10px;
+    color: darkgray;
+  }
+  /* carddetail.css*/
+  .card-detail-container{
+    
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    width: 91%;
+    height: 440px;
+    margin: 60px;
+}
+.mainheading{
+    padding: 20px;
+}
+.complete-card-detail{
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    height: auto; 
+    margin-left: 40px;
+    padding: 10px;
+    margin-bottom: 70px;
+
+}
+.card-detail-image{
+    height: 170px;
+    width: 280px;
+    border: 1px solid lightgray
+}
+.card-detail-header{
+    display: flex;
+    margin-top: 15px;
+    justify-content: space-between;
+}
+.header-text{
+   color: gray;
+    font-weight: bold;
+}
+.card-detail-content{
+    padding: 20px 0px;
+}
+
+/* newcard.css*/
+
+.new-card-container {
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    background-color: white;
+    width: 283px;
+    padding: 15px;
+    margin: 10px; /* Reduced margin to avoid overflow */
+    transition: box-shadow 0.3s;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+  }
+  
+  .new-card-container:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+  
+  .new-card-logo img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px 10px 0 0;
+    margin-bottom: 10px; /* Reduced margin */
+  }
+  
+  .new-card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+  
+  .new-card-header h2 {
+    margin: 0;
+    font-size: 18px;
+    color: #343a40;
+  }
+  
+  .new-card-arrow {
+    font-size: 20px;
+    color: #6A0DAD;
+  }
+  
+  .new-card-content {
+    padding-top: 10px;
+  }
+  
+  .new-card-item {
+    font-size: 14px; /* Reduced font size */
+    margin: 5px 0;
+    color: #555;
+    display: flex;
+    align-items: center;
+  }
+  
+  .new-card-item-strong {
+    color: #6A0DAD;
+    margin-bottom: 15px;
+    font-weight: 500;
+  }
+  
+  .icon {
+    width: 16px; /* Adjust size as needed */
+    height: 16px;
+    margin-right: 5px;
+  }
