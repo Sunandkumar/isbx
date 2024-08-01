@@ -10,8 +10,7 @@ const MainContainer = () => {
 
   
   const [homecardsData, sethomecardsData] = useState([]);
-  const [imageData, setimageData] = useState([]);
-
+ 
   const navigate = useNavigate();
 
   useEffect(()=>{
@@ -26,22 +25,22 @@ const MainContainer = () => {
 
 //image 
 
-  useEffect(() => {
-    axios.get('https://jsonplaceholder.typicode.com/photos')
-    .then(response => {
-        setimageData(response.data)
-    })
-    .catch(error => {
-      console.error('error while fetching api:',error)
-    });
-  }, []);
+  // useEffect(() => {
+  //   axios.get('https://jsonplaceholder.typicode.com/photos')
+  //   .then(response => {
+  //       setimageData(response.data)
+  //   })
+  //   .catch(error => {
+  //     console.error('error while fetching api:',error)
+  //   });
+  // }, []);
 
 
   const viewallinstitutes = () => {
     navigate('/allinstitutes',{state: {homecardsData}});
   };
 
-  const limitedCardsData = homecardsData.slice(0, 4);
+  const limitedCardsData = homecardsData.slice(0, 3);
 
   // const cardsData = [
   //   { title: 'CBIT', assignedPrograms: 5, currentPrograms: 3, completedPrograms: 10, upcomingPrograms: 2, imageUrl: '/src/assets/cbit2.jpg', imgIcon: '/src/assets/bar-chart.png' },

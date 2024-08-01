@@ -1,61 +1,116 @@
-import { useLocation } from 'react-router-dom';
+//import  { useEffect, useState } from 'react';
+import { useLocation, useNavigate } from 'react-router-dom';
 import './reusable.css';
+import Tabs from './Tabs';
+import BasicExample from './BasicExample';// Import the reusable component
+import Card from './Card';
+
+
+
 const CardDetail = () => {
+
+  //const[basicexample, setBasicexample] = useState([]);
+  
   const location = useLocation();
-  const { imageUrl, enrolled, onschedule, behindschedule, started ,ended, essentials, enrollednumber,onschedulenumber,behindschedulenumber} = location.state || {};
-  const spanStyleenrollednumber = {   
-    color: 'green',
-    fontSize: '18px',
-    fontWeight: 'bolder',
-    margin: '10px',
+  const navigate = useNavigate();
+
+//   useEffect(() => {
+//     axios.get('https://jsonplaceholder.typicode.com/users')
+//         .then(response => {
+//             setBasicexample(response.data)
+//         })
+//         .catch(error => {
+//             console.error('error while fetching api',error)
+//         });
+
+//   },[]);
+
+  const {
+    imageUrl,
+    enrolled,
+    onschedule,
+    behindschedule,
+    started,
+    ended,
+    essentials,
+    enrollednumber,
+    onschedulenumber,
+    behindschedulenumber,
+  } = location.state || {};
+
+  const handleBackClick = () => {
+    navigate(-1); 
   };
-  const spanStyleonschedule = {
-    color: 'blue',
-    fontSize: '18px',
-    fontWeight: 'bolder',
-    margin: '10px',
-  };
-  const spanStylebehindschedule = {
-    color: 'red',
-    fontSize: '18px',
-    fontWeight: 'bolder',
-    margin: '10px',
-  };
+
   return (
     <>
-    <div>
-        <h3><span>⬅</span>Back to Dashboard</h3>
-    </div>
-    <div>
-        <h3>Institute Dashboard - Vidya Jyothi Institute</h3>
-    </div>
-    <div className="card-detail-container">
-      <h3 className='mainheading'>Programmes</h3>
-      <div className="complete-card-detail">
-        <div className="card-detail-logo">
-          <img src={imageUrl} alt="Institution" className="card-detail-image"/>
+      {/* Uncomment this if you want to include the header */}
+      {/* <div className='headerdiv'>
+        <Header/>
+      </div> */}
+      <div className='institute-dashboard'>
+        <div className="back-to-dashboard" onClick={handleBackClick}>
+          <h3 className='b-t-b'><span>⬅</span> Back to Dashboard</h3>
         </div>
-        <div className="card-detail-header">
-          <div>
-          <span style={spanStyleenrollednumber}>{enrollednumber}</span>
-          <h6 className='header-text'>{enrolled}</h6>
-          </div>
-          <div>
-          <span style={spanStyleonschedule}>{onschedulenumber}</span>
-          <h6 className='header-text'>{onschedule}</h6>
-          </div>
-          <div>
-          <span style={ spanStylebehindschedule}>{behindschedulenumber}</span>
-          <h6 className='header-text'>{behindschedule}</h6>
-          </div>
+        <div className="institute-header">
+          <h3>Institute Dashboard - Vidya Jyothi Institute</h3>
         </div>
-        <div className="card-detail-content">
-                <div className="card-detail-item">{started}</div>
-                <div className="card-detail-item">{ended}</div>
-                <div className="card-detail-item-strong"><strong>{essentials}</strong></div>
-            </div>
       </div>
-    </div>
+
+      <div className="card-grid">
+        {Array.from({ length: 4 }).map((_, index) => (
+          <Card key={index} />
+        ))}
+      </div>
+
+      {/* Tabs component */}
+      <div>
+        <Tabs className="tabs"/>
+      </div>
+
+      {/* Use the BasicExample component */}
+      <div className='programmes'>
+        <h4 className='prog'>Programmes</h4>
+        <div className='card-flex'>
+      <BasicExample
+        imageUrl={imageUrl}
+        enrollednumber={enrollednumber}
+        onschedulenumber={onschedulenumber}
+        behindschedulenumber={behindschedulenumber}
+        enrolled={enrolled}
+        onschedule={onschedule}
+        behindschedule={behindschedule}
+        started={started}
+        ended={ended}
+        essentials={essentials}
+      />
+      <BasicExample
+        imageUrl={imageUrl}
+        enrollednumber={enrollednumber}
+        onschedulenumber={onschedulenumber}
+        behindschedulenumber={behindschedulenumber}
+        enrolled={enrolled}
+        onschedule={onschedule}
+        behindschedule={behindschedule}
+        started={started}
+        ended={ended}
+        essentials={essentials}
+      />
+      <BasicExample
+        imageUrl={imageUrl}
+        enrollednumber={enrollednumber}
+        onschedulenumber={onschedulenumber}
+        behindschedulenumber={behindschedulenumber}
+        enrolled={enrolled}
+        onschedule={onschedule}
+        behindschedule={behindschedule}
+        started={started}
+        ended={ended}
+        essentials={essentials}
+      />
+      </div>
+      </div>
+      
     </>
   );
 };

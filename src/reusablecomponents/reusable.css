@@ -97,12 +97,13 @@
     border: 1px solid #ddd;
     border-radius: 10px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    width: 91%;
-    height: 440px;
-    margin: 60px;
+    width: 250px;
+    height: auto;
+    margin: 10px;
+    margin-left: 72px;
 }
-.mainheading{
-    padding: 20px;
+.main-heading{
+    padding: 15px;
 }
 .complete-card-detail{
     background-color: white;
@@ -117,14 +118,15 @@
 
 }
 .card-detail-image{
-    height: 170px;
-    width: 280px;
-    border: 1px solid lightgray
+    height: 150px;
+    width: auto;
+    border: 1px solid lightgray;
+    margin: 13px;
 }
 .card-detail-header{
     display: flex;
-    margin-top: 15px;
-    justify-content: space-between;
+    margin-top: 0px;
+    justify-content: space-around;
 }
 .header-text{
    color: gray;
@@ -132,6 +134,32 @@
 }
 .card-detail-content{
     padding: 20px 0px;
+}
+.card-detail-item{
+  font-size:small;
+  font-weight: 700;
+  color: rgb(27, 27, 27);
+  margin-left: 15px;
+}
+.card-detail-item-strong{
+  margin-left: 15px;
+  padding-top: 20px;
+
+}
+.programmes{
+  background-color:white;
+  border-radius: 20px;
+  width: 89%;
+  margin-left: 73px;
+  box-shadow: 0 2px 15px rgba(0, 0, 0, 0.2);
+}
+.prog{
+padding-top: 15px;
+padding-left: 15px;
+}
+.card-flex{
+  display: flex;
+  justify-content: space-around;
 }
 
 /* newcard.css*/
@@ -202,3 +230,82 @@
     height: 16px;
     margin-right: 5px;
   }
+
+
+  /*Tabs*/
+
+  .tabs {
+    display: flex;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    overflow: hidden;
+    max-width: 600px;
+    margin: 20px auto;
+    
+  }
+  
+  .tab-button {
+    flex: 1;
+    
+    cursor: pointer;
+    background-color: #fff;
+    border: none;
+    outline: none;
+    font-size: 16px;
+    color: #555;
+    transition: background-color 0.3s, color 0.3s;
+  }
+  
+  .tab-button:hover {
+    background-color: #f5f5f5;
+  }
+  
+  .tab-button.active {
+    background-color: #5e35b1;
+    color: #fff;
+    font-weight: bold;
+    padding: 10px 10px;
+    
+  }
+  
+  .tab-button:not(.active) {
+    border-right: 1px solid #ccc;
+    
+  }
+  
+  .tab-button:last-child:not(.active) {
+    border-right: none;
+    
+  }
+  
+
+  /*CardDetail*/
+.institute-dashboard{
+  margin-left: 54px;
+}
+.back-to-dashboard{
+  padding-left: 20px;
+}
+.b-t-b{
+  cursor: pointer;
+}
+.institute-header{
+  color: #6A0DAD;
+  padding: 10px;
+  padding-left: 25px;
+  font-weight: 900;
+}
+
+.card-list{
+  display: flex;
+  justify-content: space-around;
+}
+.tabs{
+  margin-left: 75px;
+}
+.card-grid{
+  display: flex;
+  margin-left: 70px;
+  margin-right: 70px;
+
+}

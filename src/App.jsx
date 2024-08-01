@@ -8,6 +8,7 @@ import AllInstitutes from './reusablecomponents/AllInstitutes';
 
 const App = () => {
   return (
+    <>
     <Layout>
       <Routes>
         <Route path="/" element={<MainContainer />} />
@@ -16,6 +17,8 @@ const App = () => {
         <Route path="/allinstitutes" element={<AllInstitutes/>}></Route>
       </Routes>
     </Layout>
+    </>
+    
   );
 };
 
