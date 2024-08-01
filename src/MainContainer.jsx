@@ -8,6 +8,7 @@ import axios from 'axios';
 
 const MainContainer = () => {
 
+  
   const [homecardsData, sethomecardsData] = useState([]);
   const [imageData, setimageData] = useState([]);
 
@@ -34,7 +35,7 @@ const MainContainer = () => {
       console.error('error while fetching api:',error)
     });
   }, []);
-  
+
 
   const viewallinstitutes = () => {
     navigate('/allinstitutes',{state: {homecardsData}});
